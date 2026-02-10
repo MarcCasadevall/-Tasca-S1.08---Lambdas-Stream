@@ -14,6 +14,14 @@ public class Main {
         List<String> months = Arrays.asList
                 ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
         months.forEach(System.out::println);
+
+        PiValue piValue = () -> 3.1415;
+        System.out.println(piValue.getPiValue());
+    }
+
+    @FunctionalInterface
+    public interface PiValue{
+        double getPiValue();
     }
 }
 
