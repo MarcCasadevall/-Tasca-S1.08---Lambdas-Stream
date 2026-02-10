@@ -27,11 +27,19 @@ public class Main {
                 .map(element -> (String) element)
                 .sorted(Comparator.comparingInt(String::length).reversed())
                 .forEach(System.out::println);
+
+         Reverse reverse = text ->
+                 new StringBuilder(text).reverse().toString();
+        System.out.println(reverse.reverseText("Lambda"));
     }
 
     @FunctionalInterface
     public interface PiValue{
         double getPiValue();
+    }
+    @FunctionalInterface
+    public interface Reverse{
+        String reverseText(String text);
     }
 }
 
