@@ -25,7 +25,7 @@ public class Main {
         elements.stream()
                 .filter(element -> element instanceof  String)
                 .map(element -> (String) element)
-                .sorted(Comparator.comparingInt(String::length))
+                .sorted(Comparator.comparingInt(String::length).reversed())
                 .forEach(System.out::println);
     }
 
